@@ -4,7 +4,7 @@ const testimonials = [
   {
     name: "María Fernanda",
     role: "Alumna",
-    text: "La academia me ayudó a desarrollar disciplina, seguridad y amor por nuestra cultura peruana.",
+    text: "La academia me ayudó a desarrollar disciplina, seguridad y amor por la marinera norteña.",
   },
   {
     name: "Carlos Ramos",
@@ -12,9 +12,9 @@ const testimonials = [
     text: "Excelente enseñanza y ambiente familiar. Mi hija disfruta cada clase y ha crecido muchísimo.",
   },
   {
-    name: "Valeria Quispe",
-    role: "Alumna competitiva",
-    text: "Gracias a Pasión y Orgullo pude participar en concursos nacionales y mejorar mi nivel profesional.",
+    name: "Thiago Frabricio",
+    role: "Alumno",
+    text: "Gracias a Pasión y Orgullo pude participar en concursos nacionales y mejorar mi nivel de baile.",
   },
 ]
 

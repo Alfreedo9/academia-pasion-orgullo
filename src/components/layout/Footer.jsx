@@ -114,7 +114,7 @@ function Footer() {
             </li>
 
             <li>
-              📍 San Sebastián - Centro de Artes EPICENTRO
+              📍 San Sebastián - Al costado del parque Cachimayo.
             </li>
 
             <li>

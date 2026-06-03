@@ -77,15 +77,23 @@ const navLinkClass = (section) =>
         {/* Logo */}
         <a
           href="#"
-          className="cursor-pointer"
+          className="flex items-center gap-3"
         >
-          <h1 className="font-[Poppins] text-xl font-bold">
-            Pasión y Orgullo
-          </h1>
+          <img
+            src="/images/logo.png"
+            alt="Academia Pasión y Orgullo"
+            className="w-12 h-12 object-contain"
+          />
 
-          <p className="text-xs text-white/60">
-            Academia de Marinera Norteña
-          </p>
+          <div>
+            <h1 className="font-[Poppins] text-xl font-bold">
+              Pasión y Orgullo
+            </h1>
+
+            <p className="text-xs text-white/60">
+              Academia de Marinera Norteña
+            </p>
+          </div>
         </a>
 
         {/* Desktop Menu */}

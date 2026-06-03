@@ -24,7 +24,7 @@ function Teachers() {
         </span>
 
         <h2 className="text-4xl md:text-5xl leading-tight font-bold mt-4 font-[Poppins]">
-          Aprende junto a profesionales apasionados por la marinera.
+          Aprende junto a profesores apasionados por la marinera.
         </h2>
 
       </div>

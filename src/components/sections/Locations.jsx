@@ -32,7 +32,7 @@ function Locations() {
             <Card key={index}>
 
               <span className="text-[#B7FF3C] text-sm font-semibold">
-                Sede
+                Horario de atención presencial: Sede
               </span>
 
               <h3 className="text-4xl font-bold mt-4">

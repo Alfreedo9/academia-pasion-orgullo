@@ -13,8 +13,7 @@ export const locations = [
     place: "Al costado del parque Cachimayo",
     address: "Cusco",
     schedules: [
-      "Martes y Jueves — 7:00 PM",
-      "---",
+      "Lunes, miercoles y viernes de 6:00 — 7:00 PM",
     ],
   },
 ]
