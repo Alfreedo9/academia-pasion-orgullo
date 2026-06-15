@@ -1,9 +1,15 @@
+import { useState } from "react"
 import { faqs } from "../../data/faqs"
-import Card from "../ui/Card"
 import FadeIn from "../ui/FadeIn"
-
+import { ChevronDown } from "lucide-react"
 
 function FAQ() {
+  const [openIndex, setOpenIndex] = useState(null)
+
+  const toggle = (index) => {
+    setOpenIndex(openIndex === index ? null : index)
+  }
+
   return (
     <FadeIn>
     <section id="faq" className="py-32 px-6">
@@ -23,24 +29,76 @@ function FAQ() {
 
         </div>
 
-        {/* FAQ List */}
-        <div className="space-y-6">
+        {/* Accordion */}
+        <div className="space-y-4">
 
-          {faqs.map((faq, index) => (
+          {faqs.map((faq, index) => {
+            const isOpen = openIndex === index
 
-            <Card key={index}>
+            return (
+              <div
+                key={index}
+                className={`
+                  relative
+                  overflow-hidden
+                  rounded-3xl
+                  border
+                  transition-all
+                  duration-300
+                  ease-out
+                  ${isOpen
+                    ? "border-[#B7FF3C]/40 bg-white/5"
+                    : "border-white/10 bg-white/3 hover:border-white/20"
+                  }
+                  backdrop-blur-xl
+                `}
+              >
 
-              <h3 className="text-2xl font-semibold">
-                {faq.question}
-              </h3>
+                {/* Glow when open */}
+                {isOpen && (
+                  <div className="absolute top-0 right-0 w-40 h-40 bg-[#B7FF3C]/10 blur-[80px] rounded-full pointer-events-none" />
+                )}
 
-              <p className="text-white/70 mt-4 leading-relaxed">
-                {faq.answer}
-              </p>
+                {/* Question button */}
+                <button
+                  onClick={() => toggle(index)}
+                  className="w-full flex items-center justify-between gap-6 p-8 text-left"
+                >
+                  <h3 className="text-xl font-semibold leading-snug">
+                    {faq.question}
+                  </h3>
 
-            </Card>
+                  <ChevronDown
+                    size={22}
+                    strokeWidth={2}
+                    className={`
+                      shrink-0
+                      text-[#B7FF3C]
+                      transition-transform
+                      duration-300
+                      ${isOpen ? "rotate-180" : ""}
+                    `}
+                  />
+                </button>
 
-          ))}
+                {/* Answer */}
+                <div
+                  className={`
+                    overflow-hidden
+                    transition-all
+                    duration-300
+                    ease-out
+                    ${isOpen ? "max-h-60 opacity-100" : "max-h-0 opacity-0"}
+                  `}
+                >
+                  <p className="text-white/70 leading-relaxed px-8 pb-8">
+                    {faq.answer}
+                  </p>
+                </div>
+
+              </div>
+            )
+          })}
 
         </div>
 

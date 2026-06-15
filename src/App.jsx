@@ -53,12 +53,12 @@ function App() {
 
       {/* Hero */}
       <Hero />
-
+      <About />
+      
       {/* Sections */}
       <Benefits />
 
-      <About />
-
+      
       <Levels />
 
       <Schedules />
@@ -69,9 +69,9 @@ function App() {
 
       <Gallery />
 
-      <Testimonials />
-
       <Achievements />
+
+      <Testimonials />
 
       <FAQ />
 

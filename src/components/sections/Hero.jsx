@@ -106,7 +106,7 @@ function Hero() {
 
           {/* Description */}
           <p className="text-white/70 text-lg md:text-xl mt-6 max-w-2xl leading-relaxed">
-            Formación moderna y profesional para niños, jóvenes y adultos en Cusco.
+            Aprende marinera norteña desde cero y lleva contigo la tradición peruana — en Cusco, con maestros que viven lo que enseñan.
           </p>
 
           {/* Buttons */}

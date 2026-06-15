@@ -7,10 +7,10 @@ function CTA() {
     >
 
       {/* Background Glow */}
-      <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-[#B7FF3C]/5 to-transparent" />
+      <div className="absolute inset-0 -z-10 bg-linear-to-b from-transparent via-[#B7FF3C]/5 to-transparent" />
 
       {/* Big Glow */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[700px] bg-[#B7FF3C]/10 blur-[140px] rounded-full -z-10" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-175 h-175 bg-[#B7FF3C]/10 blur-[140px] rounded-full -z-10" />
 
       <div className="max-w-5xl mx-auto text-center">
 
@@ -21,11 +21,11 @@ function CTA() {
           </span>
 
           <h2 className="text-5xl md:text-7xl font-bold leading-tight mt-6 font-[Poppins]">
-            Vive la pasión de la marinera norteña.
+            Las inscripciones están abiertas — únete esta semana.
           </h2>
 
           <p className="text-white/70 text-xl leading-relaxed mt-8 max-w-3xl mx-auto">
-            Aprende, compite y crece junto a una academia que promueve cultura, disciplina y orgullo peruano.
+            Plazas limitadas por grupo. Escríbenos hoy y asegura tu lugar en la academia que ya formó a más de 200 alumnos en Cusco.
           </p>
 
           {/* Buttons */}
@@ -60,13 +60,13 @@ function CTA() {
                 rounded-2xl
                 border
                 border-white/10
-                bg-white/[0.03]
+                bg-white/3
                 backdrop-blur-xl
                 font-semibold
                 transition-all
                 duration-500
                 ease-out
-                hover:bg-white/[0.06]
+                hover:bg-white/6
               "
             >
               Ver horarios

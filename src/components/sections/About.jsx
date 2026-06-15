@@ -39,11 +39,11 @@ function About() {
               <div>
 
                 <h3 className="text-4xl font-bold text-[#B7FF3C]">
-                  +3
+                  2
                 </h3>
 
                 <p className="text-white/60 mt-2">
-                  Años enseñando
+                  Sedes en Cusco
                 </p>
 
               </div>

@@ -12,7 +12,7 @@ const testimonials = [
     text: "Excelente enseñanza y ambiente familiar. Mi hija disfruta cada clase y ha crecido muchísimo.",
   },
   {
-    name: "Thiago Frabricio",
+    name: "Thiago Fabricio",
     role: "Alumno",
     text: "Gracias a Pasión y Orgullo pude participar en concursos nacionales y mejorar mi nivel de baile.",
   },
