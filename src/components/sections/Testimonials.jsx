@@ -40,7 +40,7 @@ function Testimonials() {
             </span>
 
             <h2 className="text-4xl md:text-5xl leading-tight font-bold mt-4 font-[Poppins]">
-              Historias que inspiran y transforman vidas.
+              Lo que dicen nuestros alumnos.
             </h2>
 
           </div>

@@ -73,6 +73,12 @@ function Footer() {
             </li>
 
             <li>
+              <a href="#horarios" className="hover:text-[#B7FF3C] transition">
+                Horarios
+              </a>
+            </li>
+
+            <li>
               <a href="#profesores" className="hover:text-[#B7FF3C] transition">
                 Profesores
               </a>

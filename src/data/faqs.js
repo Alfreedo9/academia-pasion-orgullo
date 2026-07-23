@@ -7,7 +7,7 @@ export const faqs = [
   {
     question: "¿Qué edades pueden participar?",
     answer:
-      "Tenemos grupos para niños desde los 4 años, jóvenes y adultos. No hay límite de edad — la marinera es para todos.",
+      "Tenemos grupos para niños desde los 4 años, jóvenes y adultos. No hay límite de edad, la marinera es para todos.",
   },
   {
     question: "¿Cuánto cuestan las clases?",

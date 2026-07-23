@@ -26,53 +26,12 @@ function About() {
             </h2>
 
             <p className="text-white/70 mt-8 text-lg leading-relaxed">
-              La Academia de Marinera Norteña Pasión y Orgullo - Cusco fue fundada por Alfredo y Lidia Quispe con el objetivo de enseñar marinera norteña de manera moderna, divertida y profesional.
+              Alfredo y Lidia Quispe fundaron la academia en 2022 con una idea simple: enseñar marinera norteña de forma cercana y profesional, sin perder la esencia de la tradición.
             </p>
 
             <p className="text-white/60 mt-6 text-lg leading-relaxed">
-              Formamos niños, jóvenes y adultos promoviendo disciplina, elegancia, identidad cultural y amor por las tradiciones peruanas.
+              Hoy formamos niños, jóvenes y adultos en dos sedes de Cusco. Cada clase mezcla disciplina y técnica con el orgullo de bailar algo que nos representa como peruanos.
             </p>
-
-            {/* Stats */}
-            <div className="grid grid-cols-3 gap-6 mt-14">
-
-              <div>
-
-                <h3 className="text-4xl font-bold text-[#B7FF3C]">
-                  2
-                </h3>
-
-                <p className="text-white/60 mt-2">
-                  Sedes en Cusco
-                </p>
-
-              </div>
-
-              <div>
-
-                <h3 className="text-4xl font-bold text-[#B7FF3C]">
-                  +200
-                </h3>
-
-                <p className="text-white/60 mt-2">
-                  Alumnos
-                </p>
-
-              </div>
-
-              <div>
-
-                <h3 className="text-4xl font-bold text-[#B7FF3C]">
-                  +20
-                </h3>
-
-                <p className="text-white/60 mt-2">
-                  Concursos
-                </p>
-
-              </div>
-
-            </div>
 
           </div>
 

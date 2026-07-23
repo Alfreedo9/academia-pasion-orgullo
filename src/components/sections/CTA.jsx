@@ -21,7 +21,7 @@ function CTA() {
           </span>
 
           <h2 className="text-5xl md:text-7xl font-bold leading-tight mt-6 font-[Poppins]">
-            Las inscripciones están abiertas — únete esta semana.
+            Las inscripciones están abiertas, únete esta semana.
           </h2>
 
           <p className="text-white/70 text-xl leading-relaxed mt-8 max-w-3xl mx-auto">

@@ -3,8 +3,12 @@ import { motion, AnimatePresence } from "framer-motion"
 import { gallery } from "../../data/gallery"
 import FadeIn from "../ui/FadeIn"
 
+const INITIAL_COUNT = 8
+
 function Gallery() {
-  const [selectedImage, setSelectedImage] = useState(null)
+  const [selectedItem, setSelectedItem] = useState(null)
+  const [showAll, setShowAll] = useState(false)
+  const visibleItems = showAll ? gallery : gallery.slice(0, INITIAL_COUNT)
   return (
     <FadeIn>
     <section
@@ -33,15 +37,15 @@ function Gallery() {
         {/* Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-          {gallery.map((item, index) => (
+          {visibleItems.map((item, index) => (
 
             <FadeIn
-              key={index}
-              delay={index * 0.15}
+              key={item.image}
+              delay={(index % INITIAL_COUNT) * 0.15}
             >
 
               <div
-              onClick={() => setSelectedImage(item.image)}
+              onClick={() => setSelectedItem(item)}
                 className="
                   group
                   relative
@@ -56,7 +60,8 @@ function Gallery() {
                 {/* Image */}
                 <img
                   src={item.image}
-                  alt="Academia Pasión y Orgullo"
+                  alt={item.alt}
+                  loading="lazy"
                   className="
                     w-full
                     h-full
@@ -100,11 +105,11 @@ function Gallery() {
                 >
 
                   <p className="text-sm text-[#B7FF3C]">
-                    Pasión y Cultura
+                    {item.tag}
                   </p>
 
                   <h3 className="text-2xl font-bold mt-2">
-                    Marinera Norteña
+                    {item.title}
                   </h3>
 
                 </div>
@@ -117,18 +122,41 @@ function Gallery() {
 
         </div>
 
+        {!showAll && gallery.length > INITIAL_COUNT && (
+          <div className="flex justify-center mt-12">
+            <button
+              onClick={() => setShowAll(true)}
+              className="
+                px-8
+                py-4
+                rounded-2xl
+                border
+                border-white/10
+                bg-white/5
+                backdrop-blur-xl
+                font-semibold
+                transition-all
+                duration-300
+                hover:bg-white/10
+              "
+            >
+              Ver más fotos
+            </button>
+          </div>
+        )}
+
       </div>
           
          <AnimatePresence>
 
-  {selectedImage && (
+  {selectedItem && (
 
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       exit={{ opacity: 0 }}
       transition={{ duration: 0.25 }}
-      onClick={() => setSelectedImage(null)}
+      onClick={() => setSelectedItem(null)}
       className="
         fixed
         inset-0
@@ -143,7 +171,7 @@ function Gallery() {
     >
 
       <button
-        onClick={() => setSelectedImage(null)}
+        onClick={() => setSelectedItem(null)}
         className="
           absolute
           top-8
@@ -181,8 +209,8 @@ function Gallery() {
         transition={{
           duration: 0.3,
         }}
-        src={selectedImage}
-        alt="Galería"
+        src={selectedItem.image}
+        alt={selectedItem.alt}
         className="
           max-w-full
           max-h-[90vh]

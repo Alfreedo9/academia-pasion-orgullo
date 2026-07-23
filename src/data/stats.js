@@ -1,18 +1,22 @@
 export const stats = [
   {
-    number: "+20",
-    label: "Concursos nacionales",
+    number: "+4",
+    label: "Años enseñando",
+  },
+  {
+    number: "2",
+    label: "Sedes en Cusco",
   },
   {
     number: "+200",
     label: "Alumnos formados",
   },
   {
-    number: "+15",
-    label: "Premios obtenidos",
+    number: "+20",
+    label: "Concursos nacionales",
   },
   {
-    number: "+3",
-    label: "Años enseñando",
+    number: "+15",
+    label: "Premios obtenidos",
   },
 ]

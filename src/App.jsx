@@ -4,7 +4,6 @@ import Benefits from "./components/sections/Benefits"
 import About from "./components/sections/About"
 import Levels from "./components/sections/Levels"
 import Teachers from "./components/sections/Teachers"
-import Locations from "./components/sections/Locations"
 import Gallery from "./components/sections/Gallery"
 import Testimonials from "./components/sections/Testimonials"
 import Achievements from "./components/sections/Achievements"
@@ -64,8 +63,6 @@ function App() {
       <Schedules />
 
       <Teachers />
-
-      <Locations />
 
       <Gallery />
 

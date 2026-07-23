@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://academia-pasion-orgullo.vercel.app/sitemap.xml

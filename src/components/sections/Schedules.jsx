@@ -1,4 +1,5 @@
 import FadeIn from "../ui/FadeIn"
+import { MapPin } from "lucide-react"
 
 function Schedules() {
   return (
@@ -36,13 +37,26 @@ function Schedules() {
 
           {/* Wanchaq */}
           <FadeIn delay={0.1}>
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 h-full">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl h-full">
 
-              <div className="absolute top-0 right-0 w-40 h-40 bg-[#B7FF3C]/10 blur-3xl rounded-full" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-[#B7FF3C]/10 blur-3xl rounded-full z-10" />
 
-              <h3 className="text-2xl font-bold mb-6">
+              <img
+                src="/images/local-actual-wanchaq.jpg"
+                alt="Salón de baile de la sede Wanchaq de la Academia Pasión y Orgullo"
+                loading="lazy"
+                className="w-full h-40 object-cover"
+              />
+
+              <div className="p-8">
+
+              <h3 className="text-2xl font-bold mb-1">
                 📍 Sede Wanchaq
               </h3>
+
+              <p className="text-white/50 text-sm mb-6">
+                Plaza Túpac Amaru, frente al Hospital de la Solidaridad
+              </p>
 
               <div className="space-y-5 text-white/80">
 
@@ -72,18 +86,30 @@ function Schedules() {
 
               </div>
 
+              </div>
+
             </div>
           </FadeIn>
 
           {/* San Sebastián */}
           <FadeIn delay={0.2}>
-            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl p-8 h-full">
+            <div className="relative overflow-hidden rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl h-full">
 
-              <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full" />
+              <div className="absolute top-0 right-0 w-40 h-40 bg-blue-500/10 blur-3xl rounded-full z-10" />
 
-              <h3 className="text-2xl font-bold mb-6">
+              <div className="w-full h-40 flex items-center justify-center bg-gradient-to-br from-blue-500/10 to-white/[0.02] text-white/30">
+                <MapPin size={32} strokeWidth={1.5} />
+              </div>
+
+              <div className="p-8">
+
+              <h3 className="text-2xl font-bold mb-1">
                 📍 Sede San Sebastián
               </h3>
+
+              <p className="text-white/50 text-sm mb-6">
+                Al costado del parque Cachimayo
+              </p>
 
               <div className="space-y-5 text-white/80">
 
@@ -96,6 +122,8 @@ function Schedules() {
                     <li>Niños Básico e Intermedio • 6:00 PM - 7:00 PM</li>
                   </ul>
                 </div>
+
+              </div>
 
               </div>
 

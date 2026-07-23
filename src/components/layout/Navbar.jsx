@@ -13,6 +13,7 @@ function Navbar() {
   const sections = [
     "nosotros",
     "niveles",
+    "horarios",
     "profesores",
     "galeria",
     "testimonios",
@@ -121,6 +122,13 @@ const navLinkClass = (section) =>
           </a>
 
           <a
+            href="#horarios"
+            className={navLinkClass("horarios")}
+          >
+            Horarios
+          </a>
+
+          <a
             href="#profesores"
             className={navLinkClass("profesores")}
           >
@@ -221,6 +229,14 @@ const navLinkClass = (section) =>
               className="text-lg font-medium transition hover:text-[#B7FF3C]"
             >
               Niveles
+            </a>
+
+            <a
+              href="#horarios"
+              onClick={closeMenu}
+              className="text-lg font-medium transition hover:text-[#B7FF3C]"
+            >
+              Horarios
             </a>
 
             <a

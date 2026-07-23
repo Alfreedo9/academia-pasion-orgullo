@@ -26,6 +26,7 @@ function Hero() {
         loop
         muted
         playsInline
+        poster="/images/poster.jpg"
         className="absolute inset-0 w-full h-full object-cover"
       >
         <source src="/videos/marinera.mp4" type="video/mp4" />
@@ -106,7 +107,7 @@ function Hero() {
 
           {/* Description */}
           <p className="text-white/70 text-lg md:text-xl mt-6 max-w-2xl leading-relaxed">
-            Aprende marinera norteña desde cero y lleva contigo la tradición peruana — en Cusco, con maestros que viven lo que enseñan.
+            Aprende marinera norteña desde cero en Cusco, con profesores que compiten y bailan la tradición que te van a enseñar.
           </p>
 
           {/* Buttons */}
@@ -130,9 +131,47 @@ function Hero() {
 
           </div>
 
+          {/* Trust strip */}
+          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mt-14 text-white/60 text-sm">
+
+            <span>
+              <strong className="text-white font-semibold">+4</strong> años enseñando
+            </span>
+
+            <span className="w-1 h-1 rounded-full bg-white/30 hidden sm:block" />
+
+            <span>
+              <strong className="text-white font-semibold">+200</strong> alumnos formados
+            </span>
+
+            <span className="w-1 h-1 rounded-full bg-white/30 hidden sm:block" />
+
+            <span>
+              <strong className="text-white font-semibold">+20</strong> concursos nacionales
+            </span>
+
+          </div>
+
         </motion.div>
 
       </div>
+
+      {/* Scroll cue */}
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1, delay: 1.2 }}
+        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50 text-xs"
+      >
+        <span>Desliza para ver más</span>
+        <motion.span
+          animate={{ y: [0, 8, 0] }}
+          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+          className="w-5 h-8 rounded-full border border-white/30 flex items-start justify-center p-1"
+        >
+          <span className="w-1 h-1.5 rounded-full bg-white/60" />
+        </motion.span>
+      </motion.div>
 
     </section>
   )
