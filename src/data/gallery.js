@@ -99,7 +99,7 @@ export const gallery = [
     image: "/images/558601254_1094838906194313_6612210404086429049_n.jpg",
     alt: "Bailarín de la academia posando con medalla tras su presentación",
     tag: "Concursos",
-    title: "Con medalla",
+    title: "Edison",
   },
   {
     image: "/images/476454975_606308868812920_8296733911006606525_n.jpg",
@@ -107,4 +107,10 @@ export const gallery = [
     tag: "Celebraciones",
     title: "Cuando baila uno, bailamos todos",
   },
+  {
+    image: "/images/CarlosUbillus.jpg",
+    alt: "Con el maestro Carlos Ubillus",
+    tag: "Concurso",
+    title: "Con el maestro Carlos Ubillus",
+  }
 ]

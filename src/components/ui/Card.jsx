@@ -10,7 +10,8 @@ function Card({ children, className = "" }) {
     border-white/10
     bg-white/[0.03]
     backdrop-blur-xl
-    p-8
+    p-6
+    sm:p-8
     transition-all
     duration-500
     ease-out

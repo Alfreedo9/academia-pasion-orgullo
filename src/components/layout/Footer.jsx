@@ -6,7 +6,7 @@ import {
 
 function Footer() {
   return (
-    <footer className="relative border-t border-white/10 py-24 px-6 overflow-hidden">
+    <footer className="relative border-t border-white/10 py-16 md:py-24 px-6 overflow-hidden">
 
       {/* Ambient Glow */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#B7FF3C]/5 via-transparent to-transparent" />
@@ -26,7 +26,7 @@ function Footer() {
         "
       />
 
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-12">
+      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-10 md:gap-12">
 
         {/* Brand */}
         <div>
@@ -254,7 +254,8 @@ function Footer() {
           mx-auto
           border-t
           border-white/10
-          mt-16
+          mt-10
+          md:mt-16
           pt-8
           text-white/40
           text-sm

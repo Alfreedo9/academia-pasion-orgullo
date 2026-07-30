@@ -11,7 +11,7 @@ import {
 
 function Benefits() {
   return (
-    <section className="py-32 px-6 relative">
+    <section className="py-16 md:py-24 lg:py-32 px-6 relative">
       <div className="absolute inset-0 -z-10 bg-linear-to-b from-transparent via-white/2 to-transparent" />
 
       
@@ -19,8 +19,8 @@ function Benefits() {
 
         {/* Heading */}
         <FadeIn>
-        <div className="max-w-2xl mb-20">
-          
+        <div className="max-w-2xl mb-10 md:mb-16 lg:mb-20">
+
           <span className="text-[#B7FF3C] font-semibold">
             Beneficios
           </span>

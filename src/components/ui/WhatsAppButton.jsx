@@ -8,12 +8,16 @@ function WhatsAppButton() {
   rel="noopener noreferrer"
   className="
     fixed
-    bottom-6
-    right-6
+    bottom-4
+    right-4
+    sm:bottom-6
+    sm:right-6
     z-50
     bg-[#25D366]
-    w-16
-    h-16
+    w-14
+    h-14
+    sm:w-16
+    sm:h-16
     rounded-full
     flex
     items-center
@@ -23,7 +27,8 @@ function WhatsAppButton() {
     transition
   "
 >
-  <FaWhatsapp size={32} />
+  <FaWhatsapp size={28} className="sm:hidden" />
+  <FaWhatsapp size={32} className="hidden sm:block" />
 </a>
   )
 }

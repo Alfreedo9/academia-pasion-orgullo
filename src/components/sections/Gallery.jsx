@@ -13,7 +13,7 @@ function Gallery() {
     <FadeIn>
     <section
       id="galeria"
-      className="scroll-mt-28 py-32 px-6"
+      className="scroll-mt-28 py-16 md:py-24 lg:py-32 px-6"
     >
 
       {/* Background Glow */}
@@ -22,7 +22,7 @@ function Gallery() {
       <div className="max-w-7xl mx-auto">
 
         {/* Heading */}
-        <div className="max-w-2xl mb-20">
+        <div className="max-w-2xl mb-10 md:mb-16 lg:mb-20">
 
           <span className="text-[#B7FF3C] font-semibold">
             Galería
@@ -51,7 +51,9 @@ function Gallery() {
                   relative
                   overflow-hidden
                   rounded-3xl
-                  h-[450px]
+                  h-65
+                  sm:h-85
+                  lg:h-112.5
                   cursor-pointer
                   bg-white/5
                 "
@@ -80,8 +82,9 @@ function Gallery() {
                     from-black/70
                     via-black/10
                     to-transparent
-                    opacity-0
-                    group-hover:opacity-100
+                    opacity-100
+                    sm:opacity-0
+                    sm:group-hover:opacity-100
                     transition-all duration-500 ease-out
                   "
                 />
@@ -95,20 +98,23 @@ function Gallery() {
                     absolute
                     bottom-0
                     left-0
-                    p-6
-                    translate-y-6
-                    opacity-0
-                    group-hover:translate-y-0
-                    group-hover:opacity-100
+                    p-4
+                    sm:p-6
+                    translate-y-0
+                    opacity-100
+                    sm:translate-y-6
+                    sm:opacity-0
+                    sm:group-hover:translate-y-0
+                    sm:group-hover:opacity-100
                     transition-all duration-500 ease-out
                   "
                 >
 
-                  <p className="text-sm text-[#B7FF3C]">
+                  <p className="text-xs sm:text-sm text-[#B7FF3C]">
                     {item.tag}
                   </p>
 
-                  <h3 className="text-2xl font-bold mt-2">
+                  <h3 className="text-lg sm:text-2xl font-bold mt-1 sm:mt-2">
                     {item.title}
                   </h3>
 

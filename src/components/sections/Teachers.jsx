@@ -6,7 +6,7 @@ function Teachers() {
   return (
     <section
   id="profesores"
-  className="scroll-mt-28 py-32 px-6"
+  className="scroll-mt-28 py-16 md:py-24 lg:py-32 px-6"
 >
 
   {/* Ambient Background */}
@@ -17,7 +17,7 @@ function Teachers() {
     {/* Heading */}
     <FadeIn>
 
-      <div className="max-w-2xl mb-20">
+      <div className="max-w-2xl mb-10 md:mb-16 lg:mb-20">
 
         <span className="text-[#B7FF3C] font-semibold">
           Profesores
@@ -51,7 +51,9 @@ function Teachers() {
               border-white/10
               bg-white/[0.03]
               backdrop-blur-xl
-              h-[550px]
+              h-95
+              sm:h-115
+              lg:h-137.5
             "
           >
 

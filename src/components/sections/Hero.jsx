@@ -18,7 +18,7 @@ function Hero() {
 
   return (
 
-    <section className="relative min-h-screen overflow-hidden pt-32">
+    <section className="relative min-h-svh overflow-hidden pt-28 sm:pt-32">
 
       {/* Background Video */}
       <video

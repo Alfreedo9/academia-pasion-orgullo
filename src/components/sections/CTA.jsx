@@ -3,7 +3,7 @@ import FadeIn from "../ui/FadeIn"
 function CTA() {
   return (
     <section
-      className="py-40 px-6 relative overflow-hidden"
+      className="py-20 md:py-28 lg:py-40 px-6 relative overflow-hidden"
     >
 
       {/* Background Glow */}

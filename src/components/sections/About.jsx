@@ -4,13 +4,13 @@ function About() {
   return (
     <section
       id="nosotros"
-      className="scroll-mt-28 py-32 px-6 relative"
+      className="scroll-mt-28 py-16 md:py-24 lg:py-32 px-6 relative"
     >
 
       {/* Ambient Glow */}
       <div className="absolute inset-0 -z-10 bg-gradient-to-b from-transparent via-white/[0.02] to-transparent" />
 
-      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-20 items-center">
+      <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-10 lg:gap-20 items-center">
 
         {/* Left Content */}
         <FadeIn delay={0.1}>
@@ -43,7 +43,9 @@ function About() {
           <div
             className="
               relative
-              h-[600px]
+              h-80
+              sm:h-105
+              lg:h-150
               rounded-[40px]
               overflow-hidden
               border

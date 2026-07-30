@@ -5,7 +5,7 @@ function Schedules() {
   return (
     <section
       id="horarios"
-      className="scroll-mt-28 py-32 px-6 relative"
+      className="scroll-mt-28 py-16 md:py-24 lg:py-32 px-6 relative"
     >
 
       {/* Background Glow */}
@@ -15,7 +15,7 @@ function Schedules() {
 
         {/* Heading */}
         <FadeIn>
-          <div className="max-w-3xl mb-20">
+          <div className="max-w-3xl mb-10 md:mb-16 lg:mb-20">
 
             <span className="text-[#B7FF3C] font-semibold">
               Horarios
