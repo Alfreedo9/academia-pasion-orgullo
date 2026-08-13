@@ -39,9 +39,37 @@ function Benefits() {
             <FadeIn key={index} delay={index * 0.2}>
             <Card>
 
-              <div className="mb-6 text-[#B7FF3C]">
-            <benefit.icon size={40} strokeWidth={1.5} />
-            </div>
+              <div
+                className="
+                  -mx-6
+                  sm:-mx-8
+                  -mt-6
+                  sm:-mt-8
+                  mb-6
+                  h-40
+                  overflow-hidden
+                  relative
+                "
+              >
+                <img
+                  src={benefit.image}
+                  alt={benefit.title}
+                  className="
+                    w-full
+                    h-full
+                    object-cover
+                    transition-all
+                    duration-500
+                    ease-out
+                    group-hover:scale-105
+                  "
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
+
+                <div className="absolute bottom-4 left-6 text-[#B7FF3C]">
+                  <benefit.icon size={32} strokeWidth={1.5} />
+                </div>
+              </div>
 
               <h3 className="text-2xl font-semibold mb-4">
                 {benefit.title}

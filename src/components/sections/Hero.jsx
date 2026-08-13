@@ -1,179 +1,126 @@
-import {
-  motion,
-  useScroll,
-  useTransform
-} from "framer-motion"
+import { MotionConfig, motion } from "framer-motion"
 
-import Button from "../ui/Button"
+import HeroHeading from "./hero/HeroHeading"
+import HeroImage from "./hero/HeroImage"
+import HeroDescription from "./hero/HeroDescription"
+import HeroBottomBar from "./hero/HeroBottomBar"
+import {
+  heroContainerVariants,
+  backgroundVariants,
+} from "./hero/heroVariants"
 
 function Hero() {
-
-  const { scrollY } = useScroll()
-
-  const y = useTransform(
-    scrollY,
-    [0, 500],
-    [0, 150]
-  )
-
   return (
-
-    <section className="relative min-h-svh overflow-hidden pt-28 sm:pt-32">
-
-      {/* Background Video */}
-      <video
-        autoPlay
-        loop
-        muted
-        playsInline
-        poster="/images/poster.jpg"
-        className="absolute inset-0 w-full h-full object-cover"
+    <MotionConfig reducedMotion="user">
+      <section
+        id="inicio"
+        className="relative min-h-svh overflow-hidden bg-[#0A2213] pt-28 sm:pt-32"
       >
-        <source src="/videos/marinera.mp4" type="video/mp4" />
-      </video>
 
-      {/* Dark Overlay */}
-      <div className="absolute inset-0 bg-black/60" />
-
-      {/* Gradient Overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-[#070B14]" />
-
-      {/* Green Glow */}
-      <motion.div
-        style={{ y }}
-        className="
-          absolute
-          top-1/3
-          left-1/2
-          -translate-x-1/2
-          w-[700px]
-          h-[700px]
-          bg-[#B7FF3C]/10
-          blur-[120px]
-          rounded-full
-        "
-      />
-
-      {/* Blue Glow */}
-      <div
-        className="
-          absolute
-          bottom-0
-          right-0
-          w-[500px]
-          h-[500px]
-          bg-blue-500/10
-          blur-[120px]
-          rounded-full
-        "
-      />
-
-      {/* Noise Texture */}
-      <div className="absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/noise.png')]" />
-
-      {/* Content Container */}
-      <div className="relative z-10 max-w-7xl mx-auto px-6">
-
+        {/* Background */}
         <motion.div
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
-          className="max-w-3xl"
+          initial="hidden"
+          animate="visible"
+          variants={backgroundVariants}
+          className="
+            absolute
+            inset-0
+            bg-[radial-gradient(ellipse_120%_80%_at_50%_-10%,#173F20_0%,#0A2213_55%,#071A0E_100%)]
+          "
+        />
+
+        {/* Ambient glow */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            left-1/2
+            top-0
+            h-[600px]
+            w-[900px]
+            -translate-x-1/2
+            -translate-y-1/3
+            rounded-full
+            bg-[#3ACB16]/10
+            blur-[160px]
+          "
+        />
+
+        {/* Fade into the rest of the page */}
+        <div
+          className="
+            pointer-events-none
+            absolute
+            inset-x-0
+            bottom-0
+            h-32
+            bg-gradient-to-b
+            from-transparent
+            to-[#070B14]
+          "
+        />
+
+        {/* Noise texture */}
+        <div className="pointer-events-none absolute inset-0 opacity-[0.03] bg-[url('https://www.transparenttextures.com/patterns/noise.png')]" />
+
+        {/* Content */}
+        <motion.div
+          initial="hidden"
+          animate="visible"
+          variants={heroContainerVariants}
+          className="
+            relative
+            z-10
+            mx-auto
+            flex
+            min-h-[calc(100svh-7rem)]
+            max-w-7xl
+            flex-col
+            px-6
+            pb-10
+            sm:min-h-[calc(100svh-8rem)]
+            sm:pb-12
+          "
         >
 
-          {/* Badge */}
-          <span
+          <div
             className="
-              inline-flex
-              items-center
-              gap-2
-              bg-white/10
-              border
-              border-white/10
-              backdrop-blur-md
-              px-5
-              py-2
-              rounded-full
-              text-sm
+              flex
+              flex-1
+              flex-col
+              justify-center
+              gap-12
+              py-10
+              lg:grid
+              lg:grid-cols-[1fr_1.1fr]
+              lg:grid-rows-2
+              lg:items-stretch
+              lg:gap-x-10
+              lg:gap-y-0
+              lg:py-0
             "
           >
-            Cultura • Elegancia • Pasión
-          </span>
 
-          {/* Title */}
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mt-8 font-[Poppins]">
-            Vive la marinera norteña con Pasión y Orgullo.
-          </h1>
+            <div className="lg:col-start-1 lg:row-start-1 lg:self-end">
+              <HeroHeading />
+            </div>
 
-          {/* Description */}
-          <p className="text-white/70 text-lg md:text-xl mt-6 max-w-2xl leading-relaxed">
-            Aprende marinera norteña desde cero en Cusco, con profesores que compiten y bailan la tradición que te van a enseñar.
-          </p>
+            <div className="lg:col-start-2 lg:row-start-1 lg:row-span-2 lg:self-center">
+              <HeroImage />
+            </div>
 
-          {/* Buttons */}
-          <div className="flex flex-wrap gap-4 mt-10">
-
-            <a
-            href="https://wa.me/51984490413?text=Hola%20quiero%20información%20sobre%20las%20clases%20de%20marinera."
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Button primary>
-              Inscribirme por WhatsApp
-            </Button>
-          </a>
-
-            <a href="#horarios">
-            <Button>
-              Ver clases y horarios
-            </Button>
-          </a>
+            <div className="lg:col-start-1 lg:row-start-2 lg:self-start">
+              <HeroDescription />
+            </div>
 
           </div>
 
-          {/* Trust strip */}
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-3 mt-14 text-white/60 text-sm">
-
-            <span>
-              <strong className="text-white font-semibold">+4</strong> años enseñando
-            </span>
-
-            <span className="w-1 h-1 rounded-full bg-white/30 hidden sm:block" />
-
-            <span>
-              <strong className="text-white font-semibold">+200</strong> alumnos formados
-            </span>
-
-            <span className="w-1 h-1 rounded-full bg-white/30 hidden sm:block" />
-
-            <span>
-              <strong className="text-white font-semibold">+20</strong> concursos nacionales
-            </span>
-
-          </div>
+          <HeroBottomBar />
 
         </motion.div>
 
-      </div>
-
-      {/* Scroll cue */}
-      <motion.div
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1, delay: 1.2 }}
-        className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex flex-col items-center gap-2 text-white/50 text-xs"
-      >
-        <span>Desliza para ver más</span>
-        <motion.span
-          animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
-          className="w-5 h-8 rounded-full border border-white/30 flex items-start justify-center p-1"
-        >
-          <span className="w-1 h-1.5 rounded-full bg-white/60" />
-        </motion.span>
-      </motion.div>
-
-    </section>
+      </section>
+    </MotionConfig>
   )
 }
 

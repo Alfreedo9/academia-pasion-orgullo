@@ -1,6 +1,29 @@
+import { useEffect, useRef } from "react"
 import FadeIn from "../ui/FadeIn"
 
 function About() {
+  const videoRef = useRef(null)
+
+  useEffect(() => {
+    const video = videoRef.current
+    if (!video) return
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          video.play().catch(() => {})
+        } else {
+          video.pause()
+        }
+      },
+      { threshold: 0.4 }
+    )
+
+    observer.observe(video)
+
+    return () => observer.disconnect()
+  }, [])
+
   return (
     <section
       id="nosotros"
@@ -26,7 +49,7 @@ function About() {
             </h2>
 
             <p className="text-white/70 mt-8 text-lg leading-relaxed">
-              Alfredo y Lidia Quispe fundaron la academia en 2022 con una idea simple: enseñar marinera norteña de forma cercana y profesional, sin perder la esencia de la tradición.
+              Fundamos la academia en 2022 con una idea simple: enseñar marinera norteña de forma cercana y profesional, sin perder la esencia de la tradición.
             </p>
 
             <p className="text-white/60 mt-6 text-lg leading-relaxed">
@@ -43,9 +66,8 @@ function About() {
           <div
             className="
               relative
-              h-80
-              sm:h-105
-              lg:h-150
+              aspect-video
+              w-full
               rounded-[40px]
               overflow-hidden
               border
@@ -61,10 +83,13 @@ function About() {
             {/* Blue Glow */}
             <div className="absolute bottom-0 right-0 w-[250px] h-[250px] bg-blue-500/10 blur-[100px] rounded-full z-10" />
 
-            {/* Image */}
-            <img
-              src="/images/barra.jpg"
-              alt="Marinera Norteña"
+            {/* Video */}
+            <video
+              ref={videoRef}
+              loop
+              muted
+              playsInline
+              aria-label="Marinera Norteña"
               className="
                 w-full
                 h-full
@@ -74,7 +99,9 @@ function About() {
                 ease-out
                 hover:scale-105
               "
-            />
+            >
+              <source src="/videos/marinera.mp4" type="video/mp4" />
+            </video>
 
             {/* Overlay */}
             <div className="absolute inset-0 bg-black/20" />
