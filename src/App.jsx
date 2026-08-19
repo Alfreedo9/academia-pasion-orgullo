@@ -12,8 +12,8 @@ import CTA from "./components/sections/CTA"
 import Footer from "./components/layout/Footer"
 import Schedules from "./components/sections/Schedules"
 
-import WhatsAppButton from "./components/ui/WhatsAppButton"
 import CursorGlow from "./components/ui/CursorGlow"
+import ChatBot from "./components/ui/ChatBot"
 
 import { motion, useScroll } from "framer-motion"
 
@@ -44,8 +44,8 @@ function App() {
       {/* Cursor Glow */}
       <CursorGlow />
 
-      {/* Floating WhatsApp */}
-      <WhatsAppButton />
+      {/* Floating Chatbot */}
+      <ChatBot />
 
       {/* Navbar */}
       <Navbar />
