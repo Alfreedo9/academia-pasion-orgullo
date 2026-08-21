@@ -12,7 +12,7 @@ function HeroDescription() {
         className="text-white/70 text-base sm:text-lg leading-relaxed"
       >
         Aprende marinera norteña, fortalece tus valores y vive nuestra
-        cultura a través de la danza.
+        cultura a través del baile.
       </motion.p>
 
       <motion.div

@@ -44,9 +44,9 @@ function HeroHeading() {
           tracking-tight
         "
       >
-        <span className="block">Bailamos</span>
-        <span className="block">lo que</span>
-        <span className="block">somos.</span>
+        Bailamos <br />
+        lo que <br />
+        somos...
       </motion.h1>
 
       <motion.p

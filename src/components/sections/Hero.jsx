@@ -1,4 +1,11 @@
-import { MotionConfig, motion } from "framer-motion"
+import { useRef } from "react"
+import {
+  MotionConfig,
+  motion,
+  useScroll,
+  useTransform,
+  useReducedMotion,
+} from "framer-motion"
 
 import HeroHeading from "./hero/HeroHeading"
 import HeroImage from "./hero/HeroImage"
@@ -10,9 +17,24 @@ import {
 } from "./hero/heroVariants"
 
 function Hero() {
+  const sectionRef = useRef(null)
+  const shouldReduceMotion = useReducedMotion()
+
+  const { scrollYProgress } = useScroll({
+    target: sectionRef,
+    offset: ["start start", "end start"],
+  })
+
+  // Layers move at different speeds while the hero scrolls out of view,
+  // background slowest, glow a bit faster, foreground content faster still.
+  const backgroundY = useTransform(scrollYProgress, [0, 1], [0, 100])
+  const glowY = useTransform(scrollYProgress, [0, 1], [0, 180])
+  const contentY = useTransform(scrollYProgress, [0, 1], [0, -70])
+
   return (
     <MotionConfig reducedMotion="user">
       <section
+        ref={sectionRef}
         id="inicio"
         className="relative min-h-svh overflow-hidden bg-[#0A2213] pt-28 sm:pt-32"
       >
@@ -22,15 +44,20 @@ function Hero() {
           initial="hidden"
           animate="visible"
           variants={backgroundVariants}
+          style={shouldReduceMotion ? undefined : { y: backgroundY }}
           className="
+            pointer-events-none
             absolute
-            inset-0
+            inset-x-0
+            -top-24
+            -bottom-24
             bg-[radial-gradient(ellipse_120%_80%_at_50%_-10%,#173F20_0%,#0A2213_55%,#071A0E_100%)]
           "
         />
 
         {/* Ambient glow */}
-        <div
+        <motion.div
+          style={shouldReduceMotion ? undefined : { y: glowY }}
           className="
             pointer-events-none
             absolute
@@ -68,6 +95,7 @@ function Hero() {
           initial="hidden"
           animate="visible"
           variants={heroContainerVariants}
+          style={shouldReduceMotion ? undefined : { y: contentY }}
           className="
             relative
             z-10

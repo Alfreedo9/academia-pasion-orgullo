@@ -78,7 +78,7 @@ const navLinkClass = (section) =>
         {/* Logo */}
         <a
           href="#"
-          className="flex items-center gap-3"
+          className="flex shrink-0 items-center gap-3"
         >
           <img
             src="/images/logo.png"
@@ -86,7 +86,7 @@ const navLinkClass = (section) =>
             className="w-12 h-12 object-contain"
           />
 
-          <div>
+          <div className="whitespace-nowrap">
             <h1 className="font-[Poppins] text-xl font-bold">
               Pasión y Orgullo
             </h1>
@@ -98,7 +98,7 @@ const navLinkClass = (section) =>
         </a>
 
         {/* Desktop Menu */}
-        <nav className="hidden md:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-8">
 
           <a
             href="#"
@@ -174,7 +174,7 @@ const navLinkClass = (section) =>
         <button
           onClick={() => setMenuOpen(!menuOpen)}
           className="
-            md:hidden
+            lg:hidden
             bg-white/10
             border
             border-white/10
@@ -197,7 +197,7 @@ const navLinkClass = (section) =>
 
         <div
           className="
-            md:hidden
+            lg:hidden
             border-t
             border-white/10
             bg-black/95

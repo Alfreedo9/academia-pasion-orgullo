@@ -12,7 +12,7 @@ export const levels = [
   {
     title: "Avanzado",
     description:
-      "Entrenamiento profesional para elevar tu nivel artístico y competitivo.",
+      "Entrenamiento personalizado para elevar tu nivel artístico y competitivo.",
   },
   {
     title: "Competitivo",
